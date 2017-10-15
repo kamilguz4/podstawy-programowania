@@ -2,54 +2,41 @@
 int main()
 
 {
-    int dzialanie;
+    int choice;
     
-    
-    int a,b;
-    printf("Podaj a:");
-    scanf("%d", &a);
-    printf("Podaj b:");
-    scanf("%d", &b);
-    
-    printf("Wybierz operacje: ");
-    int operacja;
-
-    scanf("%d", &operacja);
-    double wynik, wynik2, wynik3, wynik4;
-    switch(dzialanie)
+    do
     {
+	
+    printf("\n0. Wyjscie\n1. Dodawanie\n2. Odejmowanie\n3. Mnozenie\n4. Dzielenie\n");
+	printf("Twoj wybor: ");
+	scanf("%d", &choice);
+	int a,b;
+    int wynik;
+    switch(choice)
+        {
         case 0:
-            
             break;
         case 1:
-           
-            wynik=a+b;
-            printf("%lf", wynik);
+            scanf("%d %d" ,&a,&b);
+			wynik=a+b;
             break;
         case 2:
-            wynik2=a-b;
-            printf("%lf", wynik2);
+            scanf("%d %d" ,&a,&b);
+			wynik=a-b;
             break;
         case 3:
-            wynik3=a*b;
-            printf("%lf", wynik3);
+            scanf("%d %d" ,&a,&b);
+			wynik=a*b;
             break;
         case 4:
-            wynik4=a/b;
-            printf("%lf", wynik4);
+            scanf("%d %d" ,&a,&b);
+			wynik=a/b;
             break;
-    }
+        }
     
-    
-
-    return 0;
+    printf("Wynik = %d", wynik);
+   }
+  while(choice !=0);
 }
 
-/*
-0. exit
- 1. dodwannie
- 2.odemij
- 3.mnozenoe    ->switch + while/dowhile
- 4.dzielenie
- twoj wybor:
- */
+
